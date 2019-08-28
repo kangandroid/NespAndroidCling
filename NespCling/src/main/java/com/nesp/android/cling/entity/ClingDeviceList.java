@@ -51,6 +51,7 @@ public class ClingDeviceList {
 
     @Nullable
     public ClingDevice getClingDevice(Device device) {
+        if (mClingDeviceList == null || mClingDeviceList.size() == 0) return null;
         for (ClingDevice clingDevice : mClingDeviceList) {
             Device deviceTemp = clingDevice.getDevice();
             if (deviceTemp != null && deviceTemp.equals(device)) {
