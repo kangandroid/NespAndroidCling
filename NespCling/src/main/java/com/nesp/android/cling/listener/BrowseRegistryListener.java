@@ -74,7 +74,7 @@ public class BrowseRegistryListener extends DefaultRegistryListener {
         }
     }
 
-    public void deviceRemoved(Device device) {
+    private void deviceRemoved(Device device) {
         Log.e(TAG, "deviceRemoved");
         if (Utils.isNotNull(mOnDeviceListChangedListener)) {
             ClingDevice clingDevice = ClingDeviceList.getInstance().getClingDevice(device);
